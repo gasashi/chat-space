@@ -1,3 +1,5 @@
+$color:#ffffff;
+
 * {
     box-sizing: border-box;
   }
@@ -6,7 +8,7 @@
   background-color: #2f3e51;
   width: 300px;
   height: 100vh;
-  color: #ffffff;
+  color: $color;
   float: left;
     .header {
       background-color: #253141;
@@ -33,11 +35,11 @@
           justify-content: flex-end;
           font-size: 13px;
           li {
-            color: #ffffff;
+            color: $color;
             margin-left: 5px;
           }
           a {
-            color: #ffffff;
+            color: $color;
           }
         }
       }
@@ -66,7 +68,7 @@
   height: 100vh;
   float: left;
     .main-header{
-      background-color: #ffffff;
+      background-color: $color;
       height: 100px;
       width: 100%;
       border-bottom: solid 1px #eeeeee;
@@ -140,7 +142,7 @@
         &__text {
           height: 50px;
           width: 100%;
-          background-color: white;
+          background-color: $color;
           line-height: 50px;
           border-style: none;
           padding: 0px 10px 0px 10px;
@@ -160,7 +162,7 @@
         background-color: #38aef0;
         height: 50px;
         width: 100px;
-        color: white;
+        color: $color;
         text-decoration: none;
         line-height: 50px;
         text-align: center;
