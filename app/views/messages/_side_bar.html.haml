@@ -2,14 +2,14 @@
   .header
     .header__box
       .header__box__name
-        毛虫
+        = current_user.name
       %ul.header__box__icon
         %li.header__box__icon__edit-user
           =link_to "#" do
             = icon('fas','edit')
         %li.header__box__icon__new-group
-          =link_to "#" do
-            = icon('fas','cog')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
   .groups
     .groups__group-info
       .groups__group-info__group-name
