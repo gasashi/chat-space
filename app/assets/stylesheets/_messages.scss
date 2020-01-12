@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
   }
+  
+a {
+  text-decoration: none;
+}
 
 .side-bar {
   background-color: $color-side;
@@ -47,15 +51,18 @@
     height: calc(100vh - 100px);
     width: 100%;
     padding: 20px 20px 0 20px;
-    &__group-info{
+    &__group-info {
       width: calc(100%);
       margin-bottom: 40px;
+     
       &__group-name {
         font-size: 15px;
         margin-bottom: 5px;
+        color: $color-w;
       }
       &__group-messege {
         font-size: 11px;
+        color: $color-w;
       }
     }
   }

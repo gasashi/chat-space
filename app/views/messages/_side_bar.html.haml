@@ -4,20 +4,17 @@
       .header__box__name
         = current_user.name
       %ul.header__box__icon
-        %li.header__box__icon__edit-user
-          =link_to "#" do
-            = icon('fas','edit')
         %li.header__box__icon__new-group
+          =link_to new_group_path do
+            = icon('fas','edit', class: 'icon')
+        %li.header__box__icon__edit-user
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .groups
-    .groups__group-info
-      .groups__group-info__group-name
-        幼虫
-      .groups__group-info__group-messege
-        まだメッセージがありません
-    .groups__group-info
-      .groups__group-info__group-name
-        幼虫
-      .groups__group-info__group-messege
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .groups__group-info
+        = link_to '#' do
+          .groups__group-info__group-name
+            = group.name
+          .groups__group-info__group-messege
+            まだメッセージがありません
