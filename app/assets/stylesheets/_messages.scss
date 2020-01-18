@@ -105,16 +105,17 @@ a {
       }
     }
 
-    .message {
+    .messages {
       background-color: $color-message-b;
       height: calc(100vh - 190px);
       width: 100％;
       border-top-color: $color-boder;
       padding: 35px 40px;
+       overflow: scroll;
         &__info{
           display: flex;
           &__member {
-            font-size: 16x;
+            font-size: 16px;
             font-weight: bold;
             color: $color-member2;
             margin-bottom: 12px;
@@ -125,7 +126,7 @@ a {
             margin-left: 10px;
           }
         }
-      &__text {
+      p {
         font-size: 14px;
         color: $color-text;
         margin-bottom: 46px;
@@ -137,42 +138,50 @@ a {
       height: 90px;
       width: 100%;
       padding: 20px 40px 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       &__input-box {
-        position: relative;
         height: 50px;
-        width: calc(100% - 115px);
-        &__text {
-          height: 50px;
-          width: 100%;
-          background-color: $color-w;
-          line-height: 50px;
-          border-style: none;
-          padding: 0px 10px 0px 10px;
-        }
-        &__image{
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          font-size: 1.3rem;
-          &__file{
-            display: none;
+        width: 100%;
+        .new_message {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .image {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            .form__input-box__text {
+              height: 50px;
+              width: 100%;
+              background-color: $color-w;
+              line-height: 50px;
+              border-style: none;
+              padding: 0px 10px 0px 10px;
+            }
+            .form__input-box__image {
+              position: absolute;
+              right: 20px;
+              display: inline-block;
+              cursor: pointer;
+              font-size: 1.3rem;
+              &--icon{
+                display: none;
+              }
+            }
+          }
+          .submit-btn {
+            background-color: $color-edit;
+            height: 50px;
+            width: 100px;
+            color: $color-w;
+            text-decoration: none;
+            line-height: 50px;
+            text-align: center;
+            margin-left: 15px;
+            cursor: pointer;
           }
         }
-      }
-      .submit-btn {
-        background-color: $color-edit;
-        height: 50px;
-        width: 100px;
-        color: $color-w;
-        text-decoration: none;
-        line-height: 50px;
-        text-align: center;
-        margin-left: 15px;
-        cursor: pointer;
       }
     }
 }
