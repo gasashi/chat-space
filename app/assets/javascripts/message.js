@@ -1,7 +1,17 @@
 $(function(){
+  
   $('#new_message').on('submit', function(e){
-    console.log('イベント発火')
     e.preventDefault()
-    // console.logを用いてイベント発火しているか確認
+    var FormData = new FormData(this);
+    var url = (this).attr('action');
+    $ajax({
+      url: url,
+      type: 'POST',
+      date: formDate,
+      datetype: 'json',
+      prcessDate: false,
+      contentType: false
+    })
   })
+
 })
