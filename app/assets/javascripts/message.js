@@ -54,12 +54,12 @@ $(function(){
       .done(function(data){
         var html = buildHTML(data);
         $('.messages').append(html);  
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});    
-        $('#new_message')[0].reset();
-        $('.submit-btn').prop("disabled", false);
+        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       })
       .fail(function(){
         alert("メッセージ送信に失敗しました");
+      })
+      .always(function(){
         $('#new_message')[0].reset();
         $('.submit-btn').prop("disabled", false);
       });
